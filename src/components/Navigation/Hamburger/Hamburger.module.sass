@@ -1,0 +1,58 @@
+@import "../../../sass-variables/colors.module"
+.HamburgerWrapper
+    display: flex
+    justify-content: flex-end      
+.Hamburger
+    top: 25px
+    right: 25px
+    position: relative
+    cursor: pointer
+    width: 50px
+    height: 48px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &> span
+        background-color: white
+        border-radius: 10px
+        transition: transform .3s linear, opacity .2s linear
+        height: 12%
+        width: 100%
+
+
+  
+            
+.Closed
+    padding: 15px    
+        
+    &>span:nth-of-type(2)
+        background-color: $yellow
+        transform: translateX(-15%)      
+
+        
+.Open
+    position: fixed
+    transform: scale(1.2)
+    margin-top: 40px
+    margin-right: 20px
+    z-index: 2000
+    &>span:nth-of-type(1)
+        background-color: #fff
+        position: absolute
+        transform: rotate(45deg)
+
+    &>span:nth-of-type(2)
+        opacity: 0
+        
+        
+    &>span:nth-of-type(3)
+        background-color: #fff
+        position: absolute
+        transform: rotate(-45deg)
+      
+        
+
+@media screen and ( min-width: 1025px  )
+    .Hamburger
+        display: none
+    

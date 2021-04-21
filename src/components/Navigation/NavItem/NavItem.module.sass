@@ -1,0 +1,24 @@
+@import "../../../sass-variables/colors.module"
+.NavItem
+    padding: 10px
+    margin: 0 15px
+   
+    .Link
+        color: white
+        text-decoration: none
+        border-bottom: 1px solid transparent
+        transition: color .2s linear, border .2s linear, text-shadow .2s linear
+        padding: 5px
+        text-shadow: 1px 1px 1px $pastel-red
+        &:hover
+            border-bottom: 1px solid $yellow
+        &.Active
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+            color: $yellow
+            border-bottom: 1px solid transparent
+            
+
+        
+        
+            
+  
