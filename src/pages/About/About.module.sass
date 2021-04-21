@@ -1,0 +1,20 @@
+@import "../../sass-variables/textSchedule.module"
+.About
+    @include textSchedule()        
+.Logo
+    width: 120px
+    display: block
+    animation: Logo 1s both
+
+
+@keyframes Logo
+    0%
+        opacity: 0
+        transform: scale(.9)
+
+    75%
+        opacity: .9
+        transform: scale(1.1)
+    100%
+        opacity: 1
+        transform: scale(1)

@@ -1,0 +1,20 @@
+@import "./paragraph.module"
+@mixin textSchedule()
+    padding: 25px
+    display: flex
+    flex-direction: column
+    align-items: center
+    box-sizing: border-box
+    position: relative
+   
+    h2
+        font-weight: 300
+        font-size: 2rem
+        align-self: flex-start
+    p
+        @include paragraph()
+        &:first-of-type
+            @include LeftTopBorder()
+        &:last-of-type
+            @include RightBottomBorder()
+    

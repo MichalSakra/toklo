@@ -1,0 +1,51 @@
+@import "../../../sass-variables/colors.module"
+.ContentBackdrop
+    background-color: rgba(0, 0, 0, 0.7)
+    box-sizing: border-box
+    position: absolute
+    bottom: 10px
+    left: 50%
+    padding: 25px
+    height: 85vh
+    width: 95vw
+    overflow-y: scroll
+    overflow-x: hidden
+    border-radius: 10px
+    display: none
+    
+    &::-webkit-scrollbar
+      background-color: $pastel-red
+      width: .25rem
+    &::-webkit-scrollbar-thumb
+      background-color: $yellow
+      border: 1px solid $pastel-red
+      border-radius: 10px
+      &:hover
+        background-color: $pastel-red
+.Show
+    display: block
+    opacity: 0
+    animation: showBackdrop .2s both
+    & > *
+        animation: showContent .5s both
+
+@keyframes showBackdrop
+    0%
+        opacity: 0
+        transform: translate(-50%, 10%) scaleY(0)
+        box-shadow: -2px 2px 5px rgba(0, 0, 0, 0)
+    100%
+        opacity: 1
+        transform: translate(-50%, 0%) scaleY(1)
+        box-shadow: -2px -2px 3px rgba(0, 0, 0, .5)
+
+@keyframes showContent
+    0%
+        transform: translateY(-10%)
+        opacity: 0
+
+    100%
+        opacity: 1
+        transform: translateY(0%)
+       
+        

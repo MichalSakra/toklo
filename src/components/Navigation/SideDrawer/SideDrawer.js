@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react"
+import { useContext } from "react"
 import Backdrop from "./Backdrop"
 import NavContext from "../../../store/nav-context"
 import { showItems } from "../utility"
