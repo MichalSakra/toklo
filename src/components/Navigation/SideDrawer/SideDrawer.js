@@ -1,13 +1,23 @@
+import { useContext, useState, useEffect } from "react"
 import Backdrop from "./Backdrop"
+import NavContext from "../../../store/nav-context"
+import { showItems } from "../utility"
+import classes from "./SideDrawer.module.sass"
+
 const SideDrawer = () => {
 
 
-    return <div>
+    const context = useContext(NavContext);
 
-        <h1>tutaj będzie lista</h1>
-        <Backdrop />
+    return (
+        <Backdrop click={context.setSideDrawerOpen}>
+            <ul className={[classes.SideDrawer, classes.SlideEffect].join(" ")}>
 
-    </div>
+                {showItems(context.items)}
+
+            </ul>
+        </Backdrop>
+    )
 }
 
 export default SideDrawer

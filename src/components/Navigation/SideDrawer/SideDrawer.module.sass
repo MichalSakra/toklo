@@ -1,7 +1,39 @@
+.SideDrawer
+    margin-top: 40px
+    height: 80vh
+    list-style: none
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    align-content: flex-end
+    & > *
+        font-size: 2rem
+
 .Backdrop
     position: fixed
+    display: flex
+    justify-content: center
+    align-content: center
+    align-items: center
     top: 0
     left: 0
     width: 100vw
     height: 100vh
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: rgba(0, 0, 0, 0.9)
+
+.SlideEffect
+    animation: showElements 1s both
+    transform: translate(0)
+
+@keyframes showElements
+    0%
+        opacity: 0
+        transform: translate(0%)
+
+    50%
+        opacity: .4    
+    100%
+        opacity: 1
+        transform: translate(-10%)
+        

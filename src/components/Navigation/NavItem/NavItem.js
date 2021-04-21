@@ -1,4 +1,6 @@
+
 import { NavLink } from 'react-router-dom'
+
 import classes from './NavItem.module.sass'
 
 const NavItem = props => {

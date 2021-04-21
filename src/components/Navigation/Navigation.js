@@ -7,6 +7,16 @@ const Navigation = props => {
 
     const [isSideDrawerOpen, setIsSideDrawerOpen] = useState(false)
 
+
+    const toggleSideDrawerHandler = () => {
+
+        return setIsSideDrawerOpen(prev => {
+
+            return !isSideDrawerOpen
+        })
+    }
+
+
     const contextValue = {
         items: [{
             id: "about",
@@ -38,24 +48,16 @@ const Navigation = props => {
             name: "kontakt"
         },
         ],
-        isSideDrawerOpen: isSideDrawerOpen
-    }
-
-    const toggleSideDrawerHandler = () => {
-
-        return setIsSideDrawerOpen(prev => {
-
-            return !isSideDrawerOpen
-        })
+        isSideDrawerOpen: isSideDrawerOpen,
+        setSideDrawerOpen: toggleSideDrawerHandler
     }
     return (
-        <div className={classes.Navigation}>
+        <nav className={classes.Navigation}>
             <NavContext.Provider value={contextValue}>
                 <Navbar hamburgerClick={toggleSideDrawerHandler} />
-
                 {isSideDrawerOpen && <SideDrawer />}
             </NavContext.Provider>
-        </div>
+        </nav>
     )
 }
 

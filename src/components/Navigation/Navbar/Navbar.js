@@ -6,10 +6,10 @@ const Navbar = props => {
 
 
     return (
-        <nav className={classes.Navbar} >
+        <div className={classes.Navbar} >
             <NavItems />
             <Hamburger click={props.hamburgerClick} />
-        </nav>
+        </div>
     )
 }
 
