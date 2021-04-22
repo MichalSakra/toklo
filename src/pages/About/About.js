@@ -1,5 +1,5 @@
-import ContentBackdrop from "../../components/UI/ContentBackdrop/ContentBackdrop"
-import Component from "../../components/UI/Component/Component"
+import ContentBackdrop from "../../containers/ContentBackdrop/ContentBackdrop"
+import Component from "../../containers/Component/Component"
 import Image from "../../components/UI/Image/Image"
 import classes from "./About.module.sass"
 

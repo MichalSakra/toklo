@@ -1,9 +1,8 @@
-import ContentBackdrop from "../../components/UI/ContentBackdrop/ContentBackdrop"
-import Component from "../../components/UI/Component/Component"
-import Image from "../../components/UI/Image/Image"
+import ContentBackdrop from "../../containers/ContentBackdrop/ContentBackdrop"
+import Component from "../../containers/Component/Component"
+
 import classes from "./Offer.module.sass"
 
-import Logo from "../../assets/images/logo/logo-02.png"
 
 const Offer = props => {
 
@@ -11,7 +10,7 @@ const Offer = props => {
 
     return <ContentBackdrop>
         <div className={classes.Offer}>
-            <h2>Co możemy dla Ciebie zrobić?</h2>
+            <h2>co możemy dla Ciebie zrobić?</h2>
             <Component >
 
                 <p>

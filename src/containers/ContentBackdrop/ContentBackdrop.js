@@ -26,12 +26,10 @@ const ContentBackdrop = props => {
     isVisible ? visibleClass = classes.Show : visibleClass = null
 
 
-    return <div className = {
-            [classes.ContentBackdrop, visibleClass].join(" ")
-        } > {
+    return <div className={[classes.ContentBackdrop, visibleClass].join(" ")
+    } > {
             props.children
-        } <
-        /div>
+        } </div>
 }
 
 export default ContentBackdrop
